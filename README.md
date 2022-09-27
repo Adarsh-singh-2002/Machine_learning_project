@@ -14,7 +14,7 @@ There are some pre requisite that should be there to develope a full fleged mach
 
 4.[GIT cli](https://git-scm.com/downloads)
 
-creating conda environment 
+creating conda environment
 ...
 
 conda create -p venv python==3.7 -y
@@ -107,4 +107,3 @@ To stop docker container
 
 docker stop <container_id>
 ...
-
