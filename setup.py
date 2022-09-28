@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 from typing import List
 
 
@@ -7,8 +7,9 @@ PROJECT_NAME="housing-predictor"
 VERSION="0.0.1"
 AUTHOR="Adarsh Kumar"
 DESCRIPTION="This is a end to end project on house price prediction."
-PACKAGES=["housing"]
+#PACKAGES=["housing"]
 REQUIREMENT_FILE_NAME="requirements.txt"
+HYPHEN_E_DOT="-e ."
 
 def get_requirements_list()->List[str]:
     """
@@ -18,7 +19,11 @@ def get_requirements_list()->List[str]:
     """
 
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines()
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
+        return requirement_list
 
 
 setup(
@@ -26,7 +31,8 @@ setup(
     version=VERSION,
     author=AUTHOR,
     description=DESCRIPTION,
-    packages=PACKAGES,
+    #packages=PACKAGES,
+    packages=find_packages(),
     install_requires=get_requirements_list()
 )
 
