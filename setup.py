@@ -4,7 +4,7 @@ from typing import List
 
 # Declaring variables for setup functions.
 PROJECT_NAME="housing-predictor"
-VERSION="0.0.1"
+VERSION="0.0.2"
 AUTHOR="Adarsh Kumar"
 DESCRIPTION="This is a end to end project on house price prediction."
 #PACKAGES=["housing"]

@@ -1,6 +1,6 @@
 # Machine_learning_project
 
-This is a end to end project developed by Adarsh Singh.....
+This is a end to end project developed by Adarsh Singh
 
 There are some pre requisite that should be there to develope a full fleged machine learning project.
 
@@ -111,4 +111,7 @@ docker stop <container_id>
 
 
 ...
+
 python setup.py install
+...
+
